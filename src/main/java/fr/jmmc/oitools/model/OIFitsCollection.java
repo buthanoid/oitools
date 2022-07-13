@@ -778,6 +778,13 @@ public final class OIFitsCollection implements ToStringable {
         return granules;
     }
 
+    public Range getMinMaxRange(String columnName) {
+        final Range range = new Range();
+        range.setMin(0);
+        range.setMax(1E-4);
+        return range;
+    }
+
     private static boolean isCustomFilter(final String name) {
         switch (name) {
             case Selector.FILTER_STAINDEX:
